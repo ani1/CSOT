@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS-Quiz</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  </head>
+
+  <body>
+  <div class="container-fluid">
+    <%= render 'layouts/navbar' %>
+  </div>
+  <h3><%= content_for?(:header) ? yield(:header) : "Dashboard" %></h3>
+  <%= yield %>
+  </body>
+</html>
